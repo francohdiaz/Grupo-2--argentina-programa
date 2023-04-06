@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif
+}
+
+body {
+    background-image: linear-gradient( #ECEBE4, #F4D6CC, #C83E4D, #4A5859);
+    text-transform: capitalize;
+}
+
+img {
+    max-width: 100%;
+}
+
+.cabecera{
+    height: 200px;
+    background: red;
+}
+
+/* Estilo para los texto del nav*/
+
+.main-nav {
+    background: #2e2e30;
+    height: 60px;
+    margin-bottom: 5px;
+}
+
+.logoD{
+    padding-left: 100px;
+}
+
+.main-nav .logo {
+    width: 100px;
+    top: 0px;
+    left: 5rem;
+    position: absolute;
+    z-index: 1;
+}
+
+.main-menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.5s;
+    transform: translateY(-100%);
+    background: #2e2e30;                 /*color lista*/
+    padding-left: 100px;
+    padding-right: 70px;
+    margin-top: 0px;
+    margin-bottom: 0;
+    padding-top: 0px;
+}
+
+.main-menu li {
+    padding: 10px;
+}
+
+.main-menu li a {
+    color: #888;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.5 ease-in-out;
+}
+
+.main-menu li a:hover {
+    color: #C83E4D;
+    border-bottom: 2px solid #C83E4D;
+}
+
+.main-menu .check {
+    color: #C83E4D;
+    border-bottom: 2px solid #C83E4D;
+}
+
+/* Fin estilo para los texto del nav*/
+
+.toggle-menu {
+    width: 25px;
+    position: absolute;
+    top: .8rem;
+    right: 2rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/********* menu con css *********/
+.toggle-menu-check:checked+.main-menu {
+    transform: translateY(0);
+}
+
+.toggle-menu-check {
+    display: none;
+}
+
+/********* fin menu con css *********/
+
+
+.main-menu--show {
+    transform: translateY(0);
+}
+
+
+@media screen and (min-width: 768px) {
+    .main-menu {
+        flex-direction: row;
+        transform: translateY(0);
+    }
+
+    .main-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .toggle-menu {
+        display: none;
+    }
+
+}
+
+/* pantalla chica*/
+@media screen and (max-width: 768px){
+    .main-nav .logo { 
+        left: 2rem;  
+    }
+
+    .main-menu {
+        padding-top: 10px;
+    }
+    
+}
+.carruselG{
+    margin: auto;
+    width: 90%;
+    
+    
+}
+.carruselG .carousel-inner .carousel-item img:hover{
+    cursor: pointer;
+}
+
+.text-central{
+    margin: auto;
+    display: flex;
+    text-align: center;
+    width: 90%;
+    height: 80px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-top: 25px;
+    
+    background: #F4B860;
+}
+.text-central h4{
+    font-size: 1rem;
+    color:#333;
+}
+
+.text-central .tex1{
+    margin-right: 50px;
+    padding-left: 50px;
+}
+
+.text-central .tex2{
+    margin-right: 50px;
+    margin-left: 10%;
+    padding-left: 50px;
+}
+
+.text-central .tex3{
+    margin-right: 50px;
+    margin-left: 10%;
+    padding-left: 50px;
+}
+.album h3{
+    text-align: center;
+    color: #333;
+    padding-bottom: 30px;
+}
+
+/*
+.container{
+    background: blue;
+}
+*/
+
+.col .card{
+    width: 100%;
+    height: 225px;
+    background: white;
+    box-shadow: 5px 5px 0.4em #333;
+}
+
+.card img{
+    margin: auto;
+    display: flex;
+    
+    height: 150px;
+    width: 150px;
+}
+.card:hover{
+    transition: all ease-in-out 0.2s;
+    transform: scale(1.02);
+   
+}
+
+.card h5{
+    text-align: center;
+    color: black;
+    padding-bottom: 10px;
+}
+
+
+/*********** Footer *************/
+.piepag{
+    margin-top: 10px;
+    padding: 40px 0;
+    /* background-color: #2e2e30; */
+}
+
+.containerF {
+    margin: 0 auto;
+    max-width: 1000px;   
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-lista h4{
+    font-size: 20px;
+    color: white;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid #00c3ff;
+    padding-bottom: 7px;
+    display: inline-block;
+    text-align: center;
+}
+
+.footer-lista{
+    width: 25%;
+    margin-right: 80px;
+    
+}
+.footer-lista ul li a{
+    font-size: 12px;
+    text-decoration: none;
+    color: #bbbbbb;
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3s ease;
+}
+
+.footer-lista ul li a:hover{
+    color: white;
+    padding-left: 6px;
+}
+
+.redes img{
+    width: 30px;
+    cursor: pointer;
+}
+
+@media(max-width: 768px){
+    .footer-row{
+        text-align: center;
+    }
+
+    .footer-lista{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+
+
