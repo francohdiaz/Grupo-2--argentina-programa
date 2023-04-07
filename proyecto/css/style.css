@@ -7,9 +7,18 @@
     font-family: sans-serif
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background-image: linear-gradient( #ECEBE4, #F4D6CC, #C83E4D, #4A5859);
     text-transform: capitalize;
+}
+
+header{
+    position: fixed;
+    width: 100%;
 }
 
 img {
@@ -184,11 +193,6 @@ img {
     padding-bottom: 30px;
 }
 
-/*
-.container{
-    background: blue;
-}
-*/
 
 .col .card{
     width: 100%;
@@ -280,5 +284,78 @@ img {
     }
 }
 
+/******* html Info *******/
 
+#nuestrosServ, #ubicacion{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    text-align: center;
+}
 
+#nosotros, #defConsum, #termin{
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    color: rgb(30,30,30);
+    text-align: center;
+}
+
+#nosotros, #nuestrosServ, #defConsum, #ubicacion, #termin {
+    text-align: center;
+    padding: 90px 12px;
+}
+
+section {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.texto{
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.textoW{
+    padding-left: 120px;
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.imageContainer{
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 400px;
+}
+
+#nosotros .imageContainer{
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("/proyecto/img/microsoft.png");
+}
+
+#nuestrosServ .imageContainer{
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("/proyecto/img/microsoft.png");
+}
+
+#defConsum .imageContainer{
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("/proyecto/img/microsoft.png");
+}
+
+#ubicacion .imageContainer{
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("/proyecto/img/microsoft.png");
+}
+
+#termin .imageContainer{
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("/proyecto/img/microsoft.png");
+}
