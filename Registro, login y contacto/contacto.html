@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contacto</title>
+</head>
+
+<body>
+
+    <section class="form-main">
+        <div class="form-content">
+            <div class="box">
+                <h4 class="encabezado ">Contacto</h4>
+                <form class="form-cont" action="">
+
+                    <div class="input-box">
+                        <label class="labelC">
+                            <span>Nombre</span>
+                            <input type="text" autocomplete="off" name="nombre" id="nombre" autofocus>
+                        </label>
+                    </div>
+                    <div class="input-box">
+                        <label class="labelC">
+                            <span>Apellido</span>
+                            <input type="text" autocomplete="off" name="apellido" id="apellido">
+                        </label>
+                    </div>
+                    <div class="input-box">
+                        <label class="labelC">
+                            <span>Telefono</span>
+                            <input type="password" autocomplete="off" name="pass" id="pass">
+                        </label>
+                    </div>
+                    <div class="input-box">
+                        <label class="labelC">
+                            <span>Correo</span>
+                            <input type="email" autocomplete="off" name="Correo" id="email">
+                        </label>
+                    </div>
+                    <div class="textarea">
+                        <label class="labelC">Mesaje</label>
+                        <textarea name="message" id="message" cols="" rows=""></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">Enviar</button>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <script>
+        const inputs = document.querySelectorAll('input'); //'querySelectorAll' por si colocamos  class //
+        inputs.forEach(input => {
+            input.onfocus = function () {
+                input.previousElementSibling.classList.add('top'); //previousElementSibling --> al anterior (span)//
+                input.previousElementSibling.classList.add('focus');
+                input.parentNode.classList.add('focus'); //parentNode --> nodo padre ( es el label)//
+            }
+            input.onblur = () => {
+                input.value = input.value.trim(); // para password//
+                if (input.value.trim().length == 0) { //trim es para eliminar los espacios//
+                    input.previousElementSibling.classList.remove('top');
+                    input.previousElementSibling.classList.remove('focus');
+                    input.parentNode.classList.remove('focus');
+                }
+            }
+        })
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
