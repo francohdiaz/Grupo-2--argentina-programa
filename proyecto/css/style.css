@@ -12,7 +12,7 @@ html{
 }
 
 body {
-    background-image: linear-gradient( #ECEBE4, #F4D6CC, #C83E4D, #4A5859);
+    background-image: linear-gradient(#ECECEC, #B0AB9D, #3F3F3F, #C83E4D);  
     text-transform: capitalize;
 }
 
@@ -163,8 +163,9 @@ img {
     margin-top: 5px;
     margin-bottom: 10px;
     padding-top: 25px;
+    border: 1px;
     
-    background: #F4B860;
+    background: #FEBE5D;
 }
 .text-central h4{
     font-size: 1rem;
