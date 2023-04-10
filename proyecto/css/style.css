@@ -53,14 +53,14 @@ img {
 .main-menu {
     display: flex;
     align-items: center;
-    flex-direction: column;
-    transition: transform 0.5s;
-    transform: translateY(-100%);
-    background: #2e2e30;                 /*color lista*/
-    padding-left: 100px;
+    /*flex-direction: column;
+    /*  transition: transform 0.5s;
+    /*transform: translateY(-100%);
+    /*background: #2e2e30;                 /*color lista*/
+    /*padding-left: 100px;*/  
     padding-right: 70px;
-    margin-top: 0px;
-    margin-bottom: 0;
+    margin-top: 0px !important;
+    margin-bottom: 0px;
     padding-top: 0px;
 }
 
@@ -145,7 +145,8 @@ img {
     
 }
 .carruselG{
-    margin: auto;
+    margin-top: 60px;
+    /*margin-right: 60px;*/
     width: 100%;
     
     
@@ -360,3 +361,19 @@ section {
 #termin .imageContainer{
     background-image: linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../img/imagenes de la info/Terminos-y-Condiciones.png");
 }
+
+/********** Estylo del Carrito ****************/
+#body-carro {
+    padding-top: 150px !important;
+}
+.show-cart li {
+    display: flex;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+  .card-img-top {
+    width: 200px;
+    height: 200px;
+    align-self: center;
+  }
