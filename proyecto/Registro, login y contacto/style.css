@@ -5,6 +5,7 @@
 }
 
 body {
+    background-image: linear-gradient(#3F3F3F, #C83E4D);
     background-color: hsl(200, 54%, 12%);
     color: hsl(0, 0%, 90%);
     font-weight: 300;
@@ -59,6 +60,8 @@ body::after {
 
 }
 /********************** Estilo constate para registro, login y contanto ********************/
+
+
 a {
     text-decoration: none;
     font-weight: 500;
@@ -131,7 +134,7 @@ a {
     cursor: pointer;
     border-radius: 25px;
     user-select: none;
-    background: linear-gradient(to right, rgb(75, 75, 235), rgb(206, 202, 202));
+    background: #3F3F3F;    
     border: none;
     color: white;
     position: relative;
@@ -170,8 +173,8 @@ a {
 
 
 .form-content .box {
-    border-color: hsl(167, 88%, 46%);
-    border: 1px solid hsl(167, 94%, 19%);
+    border-color: hsl(168, 12%, 76%);
+    border: 1px solid hsl(168, 12%, 76%);
     padding: 40px 50px;
     border-radius: 20px;
 }
@@ -197,7 +200,7 @@ a {
 }
 
 .labelR span {
-    color: rgb(50, 138, 253);
+    color: rgb(201, 211, 204);
     position: absolute;
     top: 8px;
     left: 10px;
@@ -207,7 +210,7 @@ a {
     left: 2px;
     top: -10px;
     font-size: 12px;
-    background: hsl(200, 54%, 12%);
+    /*background: hsl(168, 12%, 76%);*/
     padding: 0 5px;
 }
 
@@ -235,7 +238,7 @@ a {
 }
 
 .labelL span {
-    color: rgb(50, 253, 118);
+    color: rgb(201, 211, 204);
     position: absolute;
     top: 8px;
     left: 10px;
@@ -272,7 +275,7 @@ a {
 }
 
 .labelC span {
-    color: rgb(50, 253, 118);
+    color: rgb(201, 211, 204);
     position: absolute;
     top: 8px;
     left: 10px;
@@ -287,7 +290,7 @@ a {
 }
 
 .textarea .labelC {
-    color: rgb(50, 253, 118);
+    color: rgb(201, 211, 204);
 }
 
 .textarea #message {
