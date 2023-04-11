@@ -18,10 +18,10 @@
                 <h4 class="encabezado ">Crea tu cuenta de usuario</h4>
                 <form class="form-reg" action="" method="POST" id="form">
 
-                    <div class="input-box"><img class="info" src="info.png">
+                    <div class="input-box">
                         <label class="labelR">
                             <span>Nombre</span>
-                            <input type="text" autocomplete="off" name="nombre" id="nombre" autofocus>
+                            <input type="text" autocomplete="off" name="nombre" id="nombre" autofocus onkeypress="return soloLetras(event)" required>
                         </label>
 
                     </div>
@@ -30,7 +30,7 @@
                     <div class="input-box">
                         <label class="labelR">
                             <span>Apellido</span>
-                            <input type="text" autocomplete="off" name="apellido" id="apellido">
+                            <input type="text" autocomplete="off" name="apellido" id="apellido" onkeypress="return soloLetras(event)" required>
                         </label>
                         <p class="warning" id="warningApe"></p>
 
@@ -38,7 +38,7 @@
                     <div class="input-box">
                         <label class="labelR">
                             <span>Correo</span>
-                            <input type="email" autocomplete="off" name="Correo" id="email">
+                            <input type="email" autocomplete="off" name="Correo" id="email" required>
                         </label>
                         <p class="warning" id="warningEmail"></p>
 
@@ -46,12 +46,12 @@
                     <div class="input-box">
                         <label class="labelR">
                             <span>Contraseña</span>
-                            <input type="password" autocomplete="off" name="pass" id="pass">
+                            <input type="password" autocomplete="off" name="pass" id="pass" required>
                         </label>
                         <p class="warning" id="warningPass"></p>
                     </div>
 
-                    <button type="submit" class="btn">Registrase</button>
+                    <button type="submit" class="btn" onclick="return confirmarRegistro()">Registrase</button>
 
                     <p> ¿Ya tienes una cuenta? <a href="login.html" class="parrafo">Ingresa con tu cuenta</a></p>
 
@@ -82,6 +82,14 @@
                 }
             }
         })
+
+        function confirmarRegistro() {
+            var registroExitoso = confirm("¿Estás seguro de que quieres registrarte?");
+            if (registroExitoso) {
+            alert("Registro exitoso");
+            }
+            return registroExitoso;
+        }
     </script>
 
     <script src="script.js"></script>

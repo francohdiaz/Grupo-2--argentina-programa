@@ -56,3 +56,25 @@ form.addEventListener("submit", e=>{
         parrafoP.innerHTML= warningPass
     }
 })
+
+/* funcion del nombre y apellido */
+
+function soloLetras(event) {
+    var charCode = event.which ? event.which : event.keyCode;
+    if (charCode > 31 && (charCode < 65 || charCode > 90) && (charCode < 97 || charCode > 122)) {
+      event.preventDefault();
+      return false;
+    }
+    return true;
+  }
+
+  /* para solo números */
+
+  function soloNumeros(event) {
+    var charCode = event.which ? event.which : event.keyCode;
+    if (charCode < 48 || charCode > 57) {
+      event.preventDefault();
+      return false;
+    }
+    return true;
+  }
