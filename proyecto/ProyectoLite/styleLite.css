@@ -2,11 +2,10 @@ body {
     background-color: #e2e1f0;
 }
 
-#header {
-    display: flex;
+/*#c {
     position: fixed;
     width: 100%;
-}
+}*/
 
 .album h3{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
