@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/scriptN.js" defer></script>
+    <script type="text/javascript" src="js/scriptF.js"></script>
+    
+
+    <title>Registrase</title>
+</head>
+
+<body>
+
+    <!---------------------- Inicio Nav ----------------------------------->
+
+    <header>
+        <div class="cabecera">
+            <nav class="nav">
+                <a href="#"><img class="logo" src="img/icon/logo.jpg"></a>
+
+                <div class="toggle">
+                    <img class="menu-logo" src="img/icon/menu.png" alt="">
+                </div>
+                <ul class="nav-menu ">
+                    <li><a href="index.html#nuestrosProductos" class="check">Productos</a></li>
+                    <!-- <li><a href="info.html">Nosotros</a></li>-->
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <!-- <li><a href="#">Registrase</a></li>-->
+                    <!--<li><a href="#">Ubicacion</a></li>-->
+                    <li><a href="login.html" class="resaltar">Iniciar Sesion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!---------------------- Fin Nav ----------------------------------->
+
+    <section class="form-main">
+        <div class="form-content">
+            <div class="box">
+                <h4 class="encabezado ">Crea tu cuenta de usuario</h4>
+                <form class="form-reg" action="#" id="form">
+
+                    <div class="input-box">
+                        <label class="labelR">
+                            <span>Nombre</span>
+                            <input type="text" autocomplete="off" name="nombre" id="nombre" autofocus onkeypress="return soloLetras(event)">
+                        </label>
+
+                    </div>
+                    <p class="warning" id="warningNom"></p>
+
+                    <div class="input-box">
+                        <label class="labelR">
+                            <span>Apellido</span>
+                            <input type="text" autocomplete="off" name="apellido" id="apellido" onkeypress="return soloLetras(event)">
+                        </label>
+                        <p class="warning" id="warningApe"></p>
+
+                    </div>
+                    <div class="input-box">
+                        <label class="labelR">
+                            <span>Correo</span>
+                            <input type="email" autocomplete="off" name="Correo" id="email">
+                        </label>
+                        <p class="warning" id="warningEmail"></p>
+
+                    </div>
+                    <div class="input-box">
+                        <label class="labelR">
+                            <span>Contraseña</span>
+                            <input type="password" autocomplete="off" name="pass" id="pass">
+                        </label>
+                        <p class="warning" id="warningPass"></p>
+                    </div>
+
+                    <button type="submit" class="btn" disabled onclick="return confirmarRegistro()">Registrase</button>
+
+                    <p> ¿Ya tienes una cuenta? <a href="login.html" class="parrafo">Ingresa con tu cuenta</a></p>
+
+                    <!--<p class="warning" id="warning"></p>-->
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+    <!---------------footer--------------------->
+    <footer class="piepag">
+        <div class="containerF">
+            <div class="footer-row">
+                <div class="footer-lista">
+                    <ul>
+                        <h4>Informacion</h4>
+                        <li><a href="info.html#nosotros">Nosotros</a></li>
+                        <li><a href="info.html#nuestrosServ">Nuestro Servicio</a></li>
+                        <li><a href="info.html#defConsum">Defensa al consumidor</a></li>
+                        <li><a href="info.html#ubicacion">Ubicacion</a></li>
+                        <li><a href="info.html#termin">Terminos y Conidciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-lista">
+                    <ul>
+                        <h4>Ayuda</h4>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="#">Compras</a></li>
+                        <li><a href="#">Formas de Pago</a></li>
+                        <li><a href="#">Envios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-lista">
+                    <h4>Redes sociales</h4>
+                    <div class="redes">
+
+                        <a href="https://www.facebook.com/"> <img src="img/icon/facebook.png" alt=""></a>
+                        <a href="https://www.instagram.com/"> <img src="img/icon/instagram.png" alt=""></a>
+                        <a href="https://www.whatsapp.com/?lang=es"> <img src="img/icon/whatsapp.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!---------------fin footer--------------------->
+
+    
+    <script>
+        Jinput()
+        validacion()
+
+    /* validar antes */
+        function confirmarRegistro() {
+            var registroExitoso = confirm("¿Estás seguro de que quieres registrarte?");
+            if (registroExitoso) {
+            alert("Registro exitoso");
+            }
+            return registroExitoso;
+        }
+
+        <!--inactivar el boton-->
+
+        var emailInput = document.getElementById("email");
+        var passInput = document.getElementById("pass");
+        var btnRegistrar = document.querySelector(".btn");
+
+        btnRegistrar.disabled = true;
+
+        emailInput.addEventListener("input", validarCamposCompletos);
+        passInput.addEventListener("input", validarCamposCompletos);
+
+        function validarCamposCompletos() {
+            if (emailInput.value && passInput.value) {
+                btnRegistrar.disabled = false;
+            } else {
+                btnRegistrar.disabled = true;
+            }
+        }
+
+    /* funcion del nombre y apellido */
+
+        function soloLetras(event) {
+            var charCode = event.which ? event.which : event.keyCode;
+            if (charCode > 31 && (charCode < 65 || charCode > 90) && (charCode < 97 || charCode > 122)) {
+            event.preventDefault();
+            return false;
+            }
+            return true;
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <!---------------------- Inicio Nav ----------------------------------->
+
+    <header>
+        <div class="cabecera">
+            <nav class="nav">
+                <a href="#"><img class="logo" src="img/icon/logo.jpg"></a>
+
+                <div class="toggle">
+                    <img class="menu-logo" src="img/icon/menu.png" alt="">
+                </div>
+                <ul class="nav-menu ">
+                    <li><a href="index.html#nuestrosProductos" class="check">Productos</a></li>
+                    <!-- <li><a href="info.html">Nosotros</a></li>-->
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="registro.html">Registrase</a></li>
+                    <!--<li><a href="#">Ubicacion</a></li>-->
+                    <!--<li><a href="login.html" class="resaltar">Iniciar Sesion</a></li>-->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!---------------------- Fin Nav ----------------------------------->
+
+    <section class="form-main">
+        <div class="form-content">
+            <div class="box">
+                <h4 class="encabezado ">Ingresa a tu cuenta</h4>
+                <form class="form-log" action="#" method="post">
+
+                    <div class="input-box">
+                        <label class="labelL">
+                            <span>Nombre</span>
+                            <input type="text" autocomplete="off" id="nombre" name="nombre" autofocus
+                                onkeypress="return soloLetras(event)" required>
+                        </label>
+                    </div>
+
+                    <div class="input-box">
+                        <label class="labelL">
+                            <span>Contraseña</span>
+                            <input type="password" autocomplete="off" name="pass" id="pass" required>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn" disabled onclick="return logear()">Ingresar</button>
+                </form>
+                <p> ¿No tienes una cuenta? <a href="registro.html" class="parrafo">Registrarse</a></p>
+
+
+
+
+
+
+                <script>
+                    const inputs = document.querySelectorAll('input'); //'querySelectorAll' por si colocamos  class //
+                    inputs.forEach(input => {
+                        input.onfocus = function () {
+                            input.previousElementSibling.classList.add('top'); //previousElementSibling --> al anterior (span)//
+                            input.previousElementSibling.classList.add('focus');
+                            input.parentNode.classList.add('focus'); //parentNode --> nodo padre ( es el label)//
+                        }
+                        input.onblur = () => {
+                            input.value = input.value.trim(); // para password//
+                            if (input.value.trim().length == 0) { //trim es para eliminar los espacios//
+                                input.previousElementSibling.classList.remove('top');
+                                input.previousElementSibling.classList.remove('focus');
+                                input.parentNode.classList.remove('focus');
+                            }
+                        }
+                    })
+
+                    function soloLetras(event) {
+                        var charCode = event.which ? event.which : event.keyCode;
+                        if (charCode > 31 && (charCode < 65 || charCode > 90) && (charCode < 97 || charCode > 122)) {
+                            event.preventDefault();
+                            return false;
+                        }
+                        return true;
+                    }
+
+                    function logear() {
+                        var registroExitoso = confirm("¿Desea iniciar sesión?");
+                        if (registroExitoso) {
+                            alert("Bienvenido");
+                        }
+                        return registroExitoso;
+                    }
+
+                    /* campos llenos */
+                    
+                    const nombreInput = document.getElementById('nombre');
+                    const passInput = document.getElementById('pass');
+                    const btnIngresar = document.querySelector('.btn');
+
+                    btnIngresar.disabled = true;
+
+                    nombreInput.addEventListener('input', validarCamposCompletos);
+                    passInput.addEventListener('input', validarCamposCompletos);
+
+                    function validarCamposCompletos() {
+                    if (nombreInput.value && passInput.value) {
+                        btnIngresar.disabled = false;
+                    } else {
+                        btnIngresar.disabled = true;
+                    }
+                    }
+                </script>
+
+            </div>
+        </div>
+    </section>
+
+    <!---------------footer--------------------->
+    <footer class="piepag">
+        <div class="containerF">
+            <div class="footer-row">
+                <div class="footer-lista">
+                    <ul>
+                        <h4>Informacion</h4>
+                        <li><a href="info.html#nosotros">Nosotros</a></li>
+                        <li><a href="info.html#nuestrosServ">Nuestro Servicio</a></li>
+                        <li><a href="info.html#defConsum">Defensa al consumidor</a></li>
+                        <li><a href="info.html#ubicacion">Ubicacion</a></li>
+                        <li><a href="info.html#termin">Terminos y Conidciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-lista">
+                    <ul>
+                        <h4>Ayuda</h4>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="#">Compras</a></li>
+                        <li><a href="#">Formas de Pago</a></li>
+                        <li><a href="#">Envios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-lista">
+                    <h4>Redes sociales</h4>
+                    <div class="redes">
+
+                        <a href="https://www.facebook.com/"> <img src="img/icon/facebook.png" alt=""></a>
+                        <a href="https://www.instagram.com/"> <img src="img/icon/instagram.png" alt=""></a>
+                        <a href="https://www.whatsapp.com/?lang=es"> <img src="img/icon/whatsapp.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+    <!---------------fin footer--------------------->
+
+    <script src="js/scriptN.js" defer></script>
+    <script src="js/scriptF.js" defer></script>
+
+</body>
+
+</html>
