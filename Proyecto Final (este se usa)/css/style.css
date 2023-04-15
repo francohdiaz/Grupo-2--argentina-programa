@@ -807,78 +807,60 @@ body {
 
 /******************************* inicio Info ***************************************/
 
-#nuestrosServ, #ubicacion{
-    display: flex;
-    justify-content: center;
-    background-color: rgb(30, 30, 30);
-    color: white;
-    text-align: center;
+#nosotros, #nuestrosServ, #ubicacion, #defConsum, #termin {
+    padding: 100px 30px;
+    text-align: start;
 }
 
-#nosotros, #defConsum, #termin{
-    display: flex;
-    justify-content: center;
-    background-color: #fff;
-    color: rgb(30,30,30);
-    text-align: center;
+#nuestrosServ p, #nuestrosServ h3, #termin p, #termin h3{
+    color: #f3f3f3;
+    padding-right: 40px;
 }
 
-#nosotros, #nuestrosServ, #defConsum, #ubicacion, #termin {
-    text-align: center;
-    padding: 90px 12px;
+.imageContainer {
+    min-width: 150px;
+    min-height: 100px;
 }
 
-section {
-    max-width: 1400px;
-    margin: auto;
-    display: flex;
-    justify-content: space-evenly;
+.text h3, .text p {
+    padding: 5px;
 }
 
-.texto{
-    width: 50%;
-    max-width: 600px;
-    text-align: initial;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.text h3 {
+    font-size: 2.5rem;
 }
 
-.textoW{
-    padding-left: 120px;
-    width: 50%;
-    max-width: 600px;
-    text-align: initial;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.text p {
+    font-size: 1.5rem;
 }
 
-.imageContainer{
-    background-size: cover;
-    background-position: center center;
-    height: 500px;
-    width: 400px;
-}
+@media (min-width: 720px) {
 
-#nosotros .imageContainer{
-    background-image: linear-gradient(0deg, rgba(63, 63, 63, 0.5), rgba(0,0,0,0.5)),url("../img/imagenes de la info/nosotros.jpg");
-}
+    .imageContainer{
+        padding: 0px 30px;
+        min-width: 500px;
+        width: 60%;
+    }
 
-#nuestrosServ .imageContainer{
-    background-image: linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../img/imagenes de la info/servi.avif");
-}
+    #nuestrosServ .imageContainer {
+        height: 75%;
+    }
+    
+    #nosotros .text, #nuestrosServ .text, #ubicacion .text, #termin .text, #defConsum .text {
+        padding: 140px 0px;
+    }
 
-#defConsum .imageContainer{
-    background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("../img/imagenes de la info/defensa.png");
-}
+    #nosotros #nuestrosServ #ubicacion #termin #defConsum {
+        padding: 100px 70px;
+    }
 
-#ubicacion .imageContainer{
-    background-image: linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../img/imagenes de la info/ubicacion.jpg");
-}
+    .text h3 {
+        font-size: 3rem;
+    }
 
-#termin .imageContainer{
-    background-image: linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../img/imagenes de la info/Terminos-y-Condiciones.png");
+    .text p {
+        font-size: 2rem;
+    }
 }
 
 /******************************* fin Info ***************************************/
