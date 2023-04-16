@@ -1,9 +1,10 @@
-function validarDatos() {
+function validarDatosC() {
     let nombre = $("#nombre").val();
     let apellido = $("#apellido").val();
     let tel = $("#tel").val();
     let email = $("#email").val();
     let msj = $("#msj").val();
+    let pass = $("#pass").val();
 
     // Expresion que valida email. Fuente:  https://es.stackoverflow.com/questions/19896/validar-email-con-una-funci%C3%B3n-en-javascript
     var caract = new RegExp(/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/);
@@ -13,6 +14,7 @@ function validarDatos() {
     $("#not-tel").text("");
     $("#not-email").text("");
     $("#not-msj").text("");
+    $("#not-pass").text("");
 
     if (nombre == ""){
         $("#not-nombre").text("* Complete este campo");
@@ -55,12 +57,22 @@ function validarDatos() {
     }
 
     if ((caract.test(email) == false) && email != ""){ 
-        $("#not-email").text("* El formato del email no correponde");
+        $("#not-email").text("* El formato no correponde. Ej: nombre@ejemplo.com");
         return false;
     }
 
     if (msj == ""){
         $("#not-msj").text("* Complete este campo");
+        return false;
+    }
+
+    if (pass === ""){
+        $("#not-pass").text("* Complete este campo");
+        return false;
+    }
+
+    if (pass.length < 8 || pass.length > 12){
+        $("#not-pass").text("* Debe contener entre 8 y 12 caracteres");
         return false;
     }
 
