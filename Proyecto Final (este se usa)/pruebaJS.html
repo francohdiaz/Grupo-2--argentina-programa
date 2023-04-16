@@ -42,7 +42,7 @@
         <div class="form-content">
             <div class="box">
                 <h4 class="encabezado ">Contacto</h4>
-                <form class="form-cont" action="">
+                <form class="form-cont" action="" onsubmit="return validarDatos()">
 
                     <div class="input-box">
                         <label class="labelC">
@@ -68,7 +68,7 @@
                     <div class="input-box">
                         <label class="labelC">
                             <span>Correo</span>
-                            <input type="email" id="email">
+                            <input type="" id="email">
                             <label class="red" id="not-email"></label>
                         </label>
                     </div>
@@ -78,7 +78,7 @@
                         <label class="red" id="not-msj"></label>
                     </div>
 
-                    <button type="button" class="btn" onclick="validarDatos()">Enviar</button>
+                    <button type="submit" class="btn">Enviar</button>
 
                 </form>
             </div>

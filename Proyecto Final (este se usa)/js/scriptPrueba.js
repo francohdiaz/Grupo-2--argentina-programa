@@ -16,18 +16,22 @@ function validarDatos() {
 
     if (nombre == ""){
         $("#not-nombre").text("* Complete este campo");
+        return false;
     }
 
     if (nombre.length < 3 && nombre != ""){
         $("#not-nombre").text("* Nombre muy corto.");
+        return false;
     }
 
     if (apellido == ""){
         $("#not-apellido").text("* Complete este campo");
+        return false;
     }
 
     if (apellido.length < 3 && apellido != ""){
         $("#not-apellido").text("* Apellido muy corto.");
+        return false;
     }
 
     /* "isNaN": Intenta convertir el parámetro pasado a un número.
@@ -36,29 +40,36 @@ function validarDatos() {
 
     if (isNaN(tel)){
         $("#not-tel").text("* Debe contener solamente números");
+        return false;
     }
     else {
         if (tel == "" || tel.length < 9 || tel.length > 11){
             $("#not-tel").text("* Ingrese entre 9 y 11 digitos");
+            return false;
         }
     }
 
-    if (email == "" || (caract.test(email) == false)){
+    if (email === ""){
         $("#not-email").text("* Complete este campo");
+        return false;
     }
 
     if ((caract.test(email) == false) && email != ""){ 
         $("#not-email").text("* El formato del email no correponde");
+        return false;
     }
 
     if (msj == ""){
         $("#not-msj").text("* Complete este campo");
+        return false;
     }
 
     /*if ($("#not-nombre").val() == "" && $("#not-apellido").val() == "" && $("#not-tel").val() == "" && $("#not-email").val() == "" && $("#not-msj").val() == ""){
         alert(" Su mensaje fue enviado con exito, nos comunicaremos a la brevedad. ¡Muchas gracias por elegirnos!");
     }*/
 
+    alert(" Su mensaje fue enviado con exito, nos comunicaremos a la brevedad. ¡Muchas gracias por elegirnos!");
+    return true;
 }
 
 ////////////////////////////   Funcion que permite solamente letras   ///////////////////////
