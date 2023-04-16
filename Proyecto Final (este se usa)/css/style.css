@@ -979,3 +979,60 @@ body {
 }
 
 /******************************* Fin API Google *************************************/
+
+/***********************v ventana flotante*******************************************/
+
+.ventCompra{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    display: none;
+    background: rgba(0, 0, 0, .8);
+}
+.ventCarrito{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    display: none;
+    background: rgba(0, 0, 0, .8);
+}
+
+.containerVF{
+    width: 45%;
+    background: white;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    padding: 50px;
+    min-height: 250px;
+    border-radius: 20px;
+    position: absolute;
+    left: 27%;
+    bottom: 35%;
+
+
+}
+
+.cerrarVF .fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+    color: #444;
+    font-size: 3rem;
+}
+
+.cerrarVF .fa-times:hover {
+    transform: rotate(90deg);
+    color: red;
+}
+
+.cerrarVF h3{
+    margin-top: 50px;
+    color: blue;
+}

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/scriptN.js" defer></script>
     <script src="js/scriptP.js" defer></script>
+    <script src="js/scriptVF.js"></script>
 
     <title>MONITORES</title>
 </head>
@@ -89,8 +90,8 @@
             </div>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
             <div class="precio">$200.000</div>
-            <button class="compra">comprar</button>
-            <button class="carrito">añadir al carrito</button>
+            <a href="javascript:abrirVentanaCompra()"><button class="compra">comprar</button></a>
+            <a href="javascript:abrirVentanaCarrito()"><button class="carrito">añadir al carrito</button></a>
         </div>
 
         <div class="preview " data-target="p-2">
@@ -107,8 +108,8 @@
             </div>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
             <div class="precio">$60.000</div>
-            <button class="compra">comprar</button>
-            <button class="carrito">añadir al carrito</button>
+            <a href="javascript:abrirVentanaCompra()"><button class="compra">comprar</button></a>
+            <a href="javascript:abrirVentanaCarrito()"><button class="carrito">añadir al carrito</button></a>
         </div>
 
         <div class="preview " data-target="p-3">
@@ -125,8 +126,8 @@
             </div>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
             <div class="precio">$40.000</div>
-            <button class="compra">compra </button>
-            <button class="carrito">añadir al carrito</button>
+            <a href="javascript:abrirVentanaCompra()"><button class="compra">comprar</button></a>
+            <a href="javascript:abrirVentanaCarrito()"><button class="carrito">añadir al carrito</button></a>
         </div>
 
         <div class="preview" data-target="p-4">
@@ -143,8 +144,8 @@
             </div>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
             <div class="precio">$150.000</div>
-            <button class="compra">comprar</button>
-            <button class="carrito">añadir al carrito</button>
+            <a href="javascript:abrirVentanaCompra()"><button class="compra">comprar</button></a>
+            <a href="javascript:abrirVentanaCarrito()"><button class="carrito">añadir al carrito</button></a>
         </div>
 
         <div class="preview " data-target="p-5">
@@ -161,8 +162,31 @@
             </div>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
             <div class="precio">$50.000</div>
-            <button class="compra">comprar</button>
-            <button class="carrito">añadir al carrito</button>
+            <a href="javascript:abrirVentanaCompra()"><button class="compra">comprar</button></a>
+            <a href="javascript:abrirVentanaCarrito()"><button class="carrito">añadir al carrito</button></a>
+        </div>
+    </div>
+
+    <!------------------ ventana flotante-------------------------->
+    <div class="ventCompra" id="flotCompra">
+        <div class="containerVF">
+            <div class="cerrarVF">
+                <a href="javascript:closeCompra()"><i class="fas fa-times"></i></a>
+            </div>
+            <h3>Gracias por su compra!!!</h3>
+            <br>
+            <h4>Se le enviara la boleta de compra a su email.</h4>
+        </div>
+    </div>
+
+    <div class="ventCarrito" id="flotCarrito">
+        <div class="containerVF">
+            <div class="cerrarVF">
+                <a href="javascript:closeCarrito()"><i class="fas fa-times"></i></a>
+            </div>
+            <h3>Añadido al Carrito!!!</h3>
+            <br>
+            <h4>El producto se añadio al carrito exitosamente.</h4>
         </div>
     </div>
 
