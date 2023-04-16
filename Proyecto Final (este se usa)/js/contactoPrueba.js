@@ -66,16 +66,6 @@ function validarDatosC() {
         return false;
     }
 
-    if (pass === ""){
-        $("#not-pass").text("* Complete este campo");
-        return false;
-    }
-
-    if (pass.length < 8 || pass.length > 12){
-        $("#not-pass").text("* Debe contener entre 8 y 12 caracteres");
-        return false;
-    }
-
     /*if ($("#not-nombre").val() == "" && $("#not-apellido").val() == "" && $("#not-tel").val() == "" && $("#not-email").val() == "" && $("#not-msj").val() == ""){
         alert(" Su mensaje fue enviado con exito, nos comunicaremos a la brevedad. ¡Muchas gracias por elegirnos!");
     }*/
