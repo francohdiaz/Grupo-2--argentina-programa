@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/scriptN.js" defer></script>
     <script type="text/javascript" src="js/scriptF.js"></script>
+    <script src="js/validación.js"></script>
     
 
     <title>Registrase</title>
@@ -78,7 +79,7 @@
                         <p class="warning" id="warningPass"></p>
                     </div>
 
-                    <button type="submit" class="btn" disabled onclick="return confirmarRegistro()">Registrase</button>
+                    <button type="submit" class="btn" onclick="validarRegistro()">Registrase</button>
 
                     <p> ¿Ya tienes una cuenta? <a href="login.html" class="parrafo">Ingresa con tu cuenta</a></p>
 
@@ -135,33 +136,6 @@
         Jinput()
         validacion()
 
-    /* validar antes */
-        function confirmarRegistro() {
-            var registroExitoso = confirm("¿Estás seguro de que quieres registrarte?");
-            if (registroExitoso) {
-            alert("Registro exitoso");
-            }
-            return registroExitoso;
-        }
-
-        <!--inactivar el boton-->
-
-        var emailInput = document.getElementById("email");
-        var passInput = document.getElementById("pass");
-        var btnRegistrar = document.querySelector(".btn");
-
-        btnRegistrar.disabled = true;
-
-        emailInput.addEventListener("input", validarCamposCompletos);
-        passInput.addEventListener("input", validarCamposCompletos);
-
-        function validarCamposCompletos() {
-            if (emailInput.value && passInput.value) {
-                btnRegistrar.disabled = false;
-            } else {
-                btnRegistrar.disabled = true;
-            }
-        }
 
     /* funcion del nombre y apellido */
 
@@ -173,6 +147,15 @@
             }
             return true;
         }
+
+    /*recolección para la funcion de validar registro */
+        var nombreInput = document.getElementById("nombre");
+        var apellidoInput = document.getElementById("apellido");
+        var emailInput = document.getElementById("email");
+        var passInput = document.getElementById("pass");
+        var btnRegistro = document.getElementById("btn-registro");
+    
+        btnRegistro.addEventListener("click", validarRegistro);
     </script>
 
 
