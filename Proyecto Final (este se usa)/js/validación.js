@@ -62,11 +62,16 @@
         } else if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/.test(nombre) || !/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/.test(apellido)) {
             alert("Los campos de nombre y apellido solo pueden contener letras.");
             return;
-        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            alert("Por favor ingresa una dirección de correo electrónico válida.");
+       
+        }  else if (/^\(?\d{3}\)?[- ]?\d{3}[- ]?\d{4}$/.test(numero)) {
+            alert ("ingrese número de telefono válido");
             return;
-        }  
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert("Por favor ingresa una dirección de correo electrónico válida.");
+        return;
+        }
         if (confirm("¿Estás seguro de que desea contactarnos?")) {
             alert("solicitud de contacto exitosa, nos comunicaremos a la brevedad");
         }
     }
+
