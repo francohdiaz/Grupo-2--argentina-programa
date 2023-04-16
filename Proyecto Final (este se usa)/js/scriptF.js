@@ -27,12 +27,12 @@ function validacion() {
         parrafoE.innerHTML = ""
         parrafoP.innerHTML = ""
 
-        if (nombre.value.length < 4) {
+        if (nombre.value.length < 3) {
             warningNom += 'El nombre no es valido porque es muy corto'
             entrar = true
         }
 
-        if (apellido.value.length < 4) {
+        if (apellido.value.length < 3) {
             warningApe += 'El apellido no es valido porque es muy corto'
             entrar = true
         }

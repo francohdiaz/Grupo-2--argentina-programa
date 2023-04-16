@@ -355,7 +355,9 @@ body {
 }
 
 /******************************** Inicio formulario  *************************************/
-
+.red {
+    color: rgb(197, 0, 0);
+}
 /********************** Estilo constate para registro, login y contanto ********************/
 /*
 a {
