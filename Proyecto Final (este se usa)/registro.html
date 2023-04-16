@@ -10,20 +10,17 @@
     <script src="js/scriptN.js" defer></script>
     <script type="text/javascript" src="js/scriptF.js"></script>
     <script src="js/validación.js"></script>
-    
+
 
     <title>Registrase</title>
 </head>
 
 <body>
-
     <!---------------------- Inicio Nav ----------------------------------->
-
     <header id="#inicio">
-        <div class="container-fluid cabecera">
-            <nav class="container-fluid nav">
-                <a href="index.html"><img class="img-fluid pt-2 ps-3" id="logo" src="img/icon/logo.jpg" style="height: 55px; width: 90px;"></a>
-
+        <div class="cabecera">
+            <nav class="nav">
+                <a href="index.html#inicio"> <img class="logo" src="img/icon/logo.jpg"></a>
                 <div class="toggle">
                     <img class="menu-logo" src="img/icon/menu.png" alt="">
                 </div>
@@ -31,7 +28,7 @@
                     <li><a href="index.html#nuestrosProductos" class="check">Productos</a></li>
                     <!-- <li><a href="info.html">Nosotros</a></li>-->
                     <li><a href="contacto.html">Contacto</a></li>
-                    <!-- <li><a href="#">Registrase</a></li>-->
+                    <li><a href="registro.html">Registrarse</a></li>
                     <!--<li><a href="#">Ubicacion</a></li>-->
                     <li><a href="login.html" class="resaltar">Iniciar Sesion</a></li>
                 </ul>
@@ -49,7 +46,8 @@
                     <div class="input-box">
                         <label class="labelR">
                             <span>Nombre</span>
-                            <input type="text" autocomplete="off" name="nombre" id="nombre" autofocus onkeypress="return soloLetras(event)" required>
+                            <input type="text" autocomplete="off" name="nombre" id="nombre" autofocus
+                                onkeypress="return soloLetras(event)" required>
                         </label>
 
                     </div>
@@ -58,7 +56,8 @@
                     <div class="input-box">
                         <label class="labelR">
                             <span>Apellido</span>
-                            <input type="text" autocomplete="off" name="apellido" id="apellido" onkeypress="return soloLetras(event)" required>
+                            <input type="text" autocomplete="off" name="apellido" id="apellido"
+                                onkeypress="return soloLetras(event)" required>
                         </label>
                         <p class="warning" id="warningApe"></p>
 
@@ -90,7 +89,7 @@
     </section>
 
 
-    
+
 
     <!---------------footer--------------------->
     <footer class="piepag">
@@ -127,34 +126,33 @@
             </div>
         </div>
     </footer>
-
-
+    </footer>
+    <div class="Copyright">
+        <h3>Copyright ARG Programa © 2023 PC MASTER S.R.L</h3>
+    </div>
     <!---------------fin footer--------------------->
 
-    
     <script>
         Jinput()
         validacion()
-
-
-    /* funcion del nombre y apellido */
+        /* funcion del nombre y apellido */
 
         function soloLetras(event) {
             var charCode = event.which ? event.which : event.keyCode;
             if (charCode > 31 && (charCode < 65 || charCode > 90) && (charCode < 97 || charCode > 122)) {
-            event.preventDefault();
-            return false;
+                event.preventDefault();
+                return false;
             }
             return true;
         }
 
-    /*recolección para la funcion de validar registro */
+        /*recolección para la funcion de validar registro */
         var nombreInput = document.getElementById("nombre");
         var apellidoInput = document.getElementById("apellido");
         var emailInput = document.getElementById("email");
         var passInput = document.getElementById("pass");
         var btnRegistro = document.getElementById("btn-registro");
-    
+
         btnRegistro.addEventListener("click", validarRegistro);
     </script>
 

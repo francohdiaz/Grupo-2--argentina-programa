@@ -28,16 +28,16 @@ body {
     border-radius: 3px;
 }
 
-@media (min-width: 720px){
+.logo {
+    margin-left: 40px;
+    margin-top: 10px;
+    height: 60px;
+    padding: 0 60px;
+}
 
-#logo {
-    height: 70px !important;
-    width: 120px !important;
-}
-}
 
 .menu-logo {
-    width: 40px;
+    width: 30px;
 }
 
 .toggle {
@@ -107,7 +107,14 @@ body {
         z-index: 10;
     }
 
-   
+    .logo {
+        margin-left: 10px;
+        margin-top: 10px;
+        height: 40px;
+        padding: 0 50px;
+    }
+
+
     .nav-menu {
         flex-direction: column;
         align-items: center;
@@ -170,16 +177,16 @@ body {
 /****************************** Carrusel ***************************************/
 .carrusulG {
     margin: auto;
-    /*width: 95%;
-    padding-top: 15px;
-    z-index: 0;*/
+    /*width: 95%;*/
+    z-index: 0;
+    padding-top: 12px;
 }
 
 @media (max-width: 768px) {
     .carrusulG {
         margin: auto;
         width: 95%;
-        margin-top: -23px;
+        margin-top: -20px;
     }
 }
 
@@ -187,7 +194,7 @@ body {
 
 /****************************** text central **************************************/
 
-@media (min-width: 720px){
+@media (min-width: 720px) {
     .text-central {
         display: flex;
         justify-content: space-evenly;
@@ -200,7 +207,7 @@ body {
 
 .text-central {
     margin: 10px;
-    border: 2px solid rgb(255, 81, 0);
+    border: 1px solid rgb(255, 81, 0);
 }
 
 
@@ -245,7 +252,7 @@ body {
 .album {
     width: 95%;
     margin: auto;
-    border: 2px solid black;
+    border: 1px solid black;
 
 }
 
@@ -260,7 +267,7 @@ body {
     width: 100%;
     height: 225px;
     background: white;
-    border: 2px solid rgb(255, 81, 0);
+    border: 1px solid rgb(255, 81, 0);
     border-radius: 6px;
 }
 
@@ -281,6 +288,60 @@ body {
 }
 
 /****************************** fin prodyctos **************************************/
+
+/****************************  slider ****************************************/
+
+.slider {
+    width: 95%;
+    height: 75px;
+    margin: auto;
+    overflow: hidden;
+    /* background: grey;*/
+    border-radius: 5px;
+    margin-top: 10px;
+    /*border: 2px solid rgb(255, 81, 0);*/
+    border-radius: 5rem;
+}
+
+.slider .slide-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(180px * 18);
+}
+
+.slider .slide {
+    width: 180px;
+    height: 80px;
+}
+
+.slider .slide img {
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    border-radius: 5rem;
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(calc(-200px * 6));
+        transform: translateX(calc(-200px * 6));
+    }
+}
+/**************************** Fin slider ****************************************/
+
+/*********** Footer *************/
+.piepag {
+    margin-top: 10px;
+    padding: 40px 0;
+    background-color: #2e2e30;
+    border-top: 5px solid rgb(255, 81, 0);
+}
 
 
 /*********** Footer *************/
@@ -338,6 +399,11 @@ body {
     cursor: pointer;
 }
 
+.Copyright h3{
+    text-align: center;
+    font-size: 11px;
+}
+
 @media(max-width: 768px) {
     .piepag {
         border-top: 5px solid rgb(255, 81, 0);
@@ -355,9 +421,7 @@ body {
 }
 
 /******************************** Inicio formulario  *************************************/
-.red {
-    color: rgb(197, 0, 0);
-}
+
 /********************** Estilo constate para registro, login y contanto ********************/
 /*
 a {
@@ -463,6 +527,12 @@ a {
 
 .parrafo {
     color: rgb(255, 81, 0);
+    font-size: 15px;
+}
+
+.parrafo:hover{
+    color: rgb(4, 0, 255);
+    
 }
 
 .form-content .warning {
@@ -472,9 +542,12 @@ a {
 
 .form-content .box {
     border-color: black;
-    border: 3px solid black;
+    border: 1px solid black;
     padding: 40px 50px;
     border-radius: 20px;
+}
+p{
+    font-size: 15px;
 }
 
 /* ********************** Inico style del registro  ***************************/
@@ -592,16 +665,15 @@ a {
 
 .textarea .labelC {
     color: rgb(255, 81, 0);
-
+    font-size: 15px;
 }
 
 .textarea #message {
     margin-bottom: 10px;
-    padding: 40px 90px;
+    padding: 0px 10px;
     width: 100%;
     border-radius: 2%;
-    border: 2px solid rgb(255, 81, 0);
-    ;
+    border: 1px solid rgb(255, 81, 0);
 }
 
 /******************************** Fin formulario contacto *******************************/
@@ -618,7 +690,7 @@ a {
     border: none;
     text-decoration: none;
     transition: all .2s linear;
-    text-transform: capitalize;
+    /* text-transform: capitalize;*/
 
 }
 
@@ -630,9 +702,6 @@ html {
 body {
     background: #eee
 }
-
-
-
 
 .container {
     max-width: 1200px;
@@ -808,13 +877,29 @@ body {
 /*********************************** Fin de Productos **********************************/
 
 /******************************* inicio Info ***************************************/
+.sectionG {
+    /*******************************************************************/
+    margin: auto;
+    width: 95%;
+    margin-top: 20px;
+    z-index: 0;
+    border: 1px solid black;
+}
 
-#nosotros, #nuestrosServ, #ubicacion, #defConsum, #termin {
+
+#nosotros,
+#nuestrosServ,
+#ubicacion,
+#defConsum,
+#termin {
     padding: 100px 30px;
     text-align: start;
 }
 
-#nuestrosServ p, #nuestrosServ h3, #termin p, #termin h3{
+#nuestrosServ p,
+#nuestrosServ h3,
+#termin p,
+#termin h3 {
     color: #f3f3f3;
     padding-right: 40px;
 }
@@ -824,7 +909,8 @@ body {
     min-height: 100px;
 }
 
-.text h3, .text p {
+.text h3,
+.text p {
     padding: 5px;
 }
 
@@ -838,7 +924,7 @@ body {
 
 @media (min-width: 720px) {
 
-    .imageContainer{
+    .imageContainer {
         padding: 0px 30px;
         min-width: 500px;
         width: 60%;
@@ -847,8 +933,12 @@ body {
     #nuestrosServ .imageContainer {
         height: 75%;
     }
-    
-    #nosotros .text, #nuestrosServ .text, #ubicacion .text, #termin .text, #defConsum .text {
+
+    #nosotros .text,
+    #nuestrosServ .text,
+    #ubicacion .text,
+    #termin .text,
+    #defConsum .text {
         padding: 140px 0px;
     }
 
@@ -868,8 +958,22 @@ body {
 /******************************* fin Info ***************************************/
 
 /******************************* API Google *************************************/
-#map{
-    height: 500px;
+
+
+#map {
+    margin: auto;
+    height: 480px;
     width: 100%;
+
 }
+
+@media (max-width: 768px) {
+    #map {
+        height: 380px;
+        width: 400px;
+
+    }
+
+}
+
 /******************************* Fin API Google *************************************/
