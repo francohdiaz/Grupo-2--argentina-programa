@@ -55,9 +55,9 @@ function validarDatos() {
         $("#not-msj").text("* Complete este campo");
     }
 
-    if ($("#not-nombre").val() == "" && $("#not-apellido").val() == "" && $("#not-tel").val() == "" && $("#not-email").val() == "" && $("#not-msj").val() == ""){
+    /*if ($("#not-nombre").val() == "" && $("#not-apellido").val() == "" && $("#not-tel").val() == "" && $("#not-email").val() == "" && $("#not-msj").val() == ""){
         alert(" Su mensaje fue enviado con exito, nos comunicaremos a la brevedad. ¡Muchas gracias por elegirnos!");
-    }
+    }*/
 
 }
 
