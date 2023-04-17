@@ -17,6 +17,8 @@ const marvel = {
         const container = document.querySelector("#marvel-row");
         let contentHTML = "";
 
+
+        // Documentacion sobre la funcion "fetch" y ".then" -- https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Using_Fetch
         fetch(urlAPI)
         .then(res => res.json())
         .then((json) => {
