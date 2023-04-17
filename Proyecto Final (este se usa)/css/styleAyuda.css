@@ -695,3 +695,8 @@ section:target p {
     padding-bottom:180px;
     margin: 10px;
 }
+
+.Copyright h3{
+    text-align: center;
+    font-size: 11px;
+}
