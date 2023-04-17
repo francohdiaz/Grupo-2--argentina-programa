@@ -1080,3 +1080,10 @@ body {
     margin-top: 50px;
     color: blue;
 }
+
+/******************** API Marvel *********************/
+
+img .img-thumbnail {
+    width: 80% !important;
+    height: 80% !important;
+}
