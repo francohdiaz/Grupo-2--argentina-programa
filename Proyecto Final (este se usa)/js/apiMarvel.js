@@ -11,6 +11,7 @@ const consultarDatos = async () =>{
     console.log(listado.data);
 }*/
 
+// Documentacion sobre "render" -- "https://es.vuejs.org/v2/guide/render-function.html"
 const marvel = {
     render:()=> {
         const urlAPI = 'https://gateway.marvel.com:443/v1/public/comics?ts=1&apikey=3f47d0914d6f663f75bd0a7275cb7a4c&hash=b5ae85f07562573e01616e47dafb4fce';
@@ -18,7 +19,7 @@ const marvel = {
         let contentHTML = "";
 
 
-        // Documentacion sobre la funcion "fetch" y ".then" -- https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Using_Fetch
+        // Documentacion sobre la funcion "fetch" y ".then" -- "https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Using_Fetch"
         fetch(urlAPI)
         .then(res => res.json())
         .then((json) => {
