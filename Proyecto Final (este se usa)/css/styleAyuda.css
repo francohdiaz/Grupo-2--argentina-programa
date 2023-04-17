@@ -1,0 +1,697 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    /*text-transform: capitalize;*/
+    list-style: none;
+}
+
+body {
+    font-family: sans-serif;
+    padding-top: 70px;
+
+}
+
+.cabecera {
+    background-color: rgb(255, 81, 0);
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    border-radius: 3px;
+}
+
+.logo {
+    margin-left: 40px;
+    height: 80px;
+    padding: 0 60px;
+}
+
+.menu-logo {
+    width: 30px;
+}
+
+.toggle {
+    padding: 20px 40px;
+    cursor: pointer;
+    line-height: 60px;
+    display: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.cabecera .nav .nav-menu li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav-menu li {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    /* text-transform: uppercase;*/
+    width: max-content;
+}
+
+
+.nav .nav-menu li a:hover {
+    color: white;
+    transition: .5s;
+}
+
+.cabecera .nav .nav-menu .check {
+    color: white;
+    border-bottom: 1px solid #fff;
+}
+
+.resaltar {
+    border: white;
+    border-radius: 6px;
+    padding: 10px 10px;
+    border: 2px solid white;
+}
+
+.resaltar:hover {
+    border-radius: 6px;
+    padding: 10px 10px;
+    border: 2px solid black;
+}
+
+
+/*------------------------ Pantalla chica ----------------------------*/
+
+@media (max-width: 768px) {
+    .cabecera {
+        height: 60px;
+        z-index: 10;
+    }
+
+    .logo {
+        display: flex;
+
+        margin-left: -10px;
+        height: 60px;
+        padding: 0 70px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(22, 21, 21);
+        width: 100%;
+        /*border-radius: 10px;*/
+        position: fixed;
+        left: 0;
+        top: 61px;
+        z-index: -1;
+        padding: 20px 0;
+        height: calc(100% - 60px);
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.6s;
+    }
+
+    .cabecera .nav .nav-menu .check {
+        color: white;
+        border-bottom: 1px solid #fff;
+    }
+
+    .cabecera .nav .nav-menu li a {
+        color: rgb(255, 81, 0);
+        text-decoration: none;
+    }
+
+    .nav .nav-menu li a:hover,
+    .check {
+        color: white;
+        transition: .5s;
+
+    }
+
+    .resaltar:hover {
+        border-radius: 6px;
+        padding: 10px 10px;
+        border: 2px solid rgb(255, 81, 0);
+    }
+
+    .nav-menu li {
+        line-height: 70px;
+    }
+
+    .toggle {
+        padding: 0px 40px;
+        cursor: pointer;
+        line-height: 60px;
+        display: block;
+    }
+
+    .nav_visibe {
+        left: 0;
+    }
+}
+
+/****************************** fin nav ***************************************/
+
+
+/****************************** text central **************************************/
+.text-central {
+    margin: auto;
+    display: flex;
+    text-align: center;
+    width: 95%;
+    height: 80px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-top: 25px;
+    /* background:  rgb(255, 81, 0);*/
+    border: 2px solid rgb(255, 81, 0);
+}
+
+
+.text-central .tex1 {
+    margin-right: 50px;
+    padding-left: 50px;
+}
+
+.text-central .tex2 {
+    margin-right: 50px;
+    margin-left: 10%;
+    padding-left: 50px;
+}
+
+.text-central .tex3 {
+    margin-right: 50px;
+    margin-left: 10%;
+    padding-left: 50px;
+}
+
+@media (max-width: 768px) {
+
+
+    .text-central .tex1 {
+        margin: 0px 0px;
+    }
+
+    .text-central .tex2 {
+        margin: 0px 0px;
+
+    }
+
+    .text-central .tex3 {
+        margin: 0px 0px;
+    }
+}
+
+/****************************** fin text central **************************************/
+
+
+
+
+/*********** Footer *************/
+.piepag {
+    margin-top: 10px;
+    padding: 40px 0;
+    background-color: #2e2e30;
+    border-top: 5px solid rgb(255, 81, 0);
+}
+
+.containerF {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.footer-lista h4 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid #00c3ff;
+    padding-bottom: 7px;
+    display: inline-block;
+    text-align: center;
+}
+
+.footer-lista {
+    width: 25%;
+    margin-right: 80px;
+
+}
+
+.footer-lista ul li a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #bbbbbb;
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3s ease;
+}
+
+.footer-lista ul li a:hover {
+    color: white;
+    padding-left: 6px;
+}
+
+.redes img {
+    width: 30px;
+    cursor: pointer;
+}
+
+@media(max-width: 768px) {
+    .piepag {
+        border-top: 5px solid rgb(255, 81, 0);
+    }
+
+    .footer-row {
+        text-align: center;
+        margin-left: 60px;
+    }
+
+    .footer-lista {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+
+/*********************************** Fin de Productos **********************************/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    text-transform: capitalize;
+
+}
+
+html {
+    font-size: 62.5%;
+    /*overflow: hidden;*/
+}
+
+body {
+    background: #eee
+}
+
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.container .titulo {
+    font-size: 3.5rem;
+    color: #444;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.container .productoos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.container .productoos-container .producto {
+
+    text-align: center;
+    background: #fff;
+    padding: 3rem 2rem;
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0, .1);
+    outline: .1rem solid #ccc;
+    outline-offset: -1.5rem;
+    cursor: pointer;
+}
+
+.container .productoos-container .producto:hover {
+    outline: .2rem solid #222;
+    outline-offset: 0;
+}
+
+.container .productoos-container .producto img {
+    height: 25rem;
+}
+
+.container .productoos-container .producto:hover img {
+    transform: scale(.9);
+}
+
+
+.container .productoos-container .producto h3 {
+    padding: .5rem 0;
+    font-size: 2rem;
+    color: #444;
+}
+
+.container .productoos-container .producto:hover h3 {
+    color: blue;
+}
+
+.container .productoos-container .producto .precio {
+    font-size: 2.5rem;
+    color: #444;
+}
+
+.productos-preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, .8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.productos-preview .preview {
+    display: none;
+    padding: 2rem;
+    text-align: center;
+    background: #fff;
+    position: relative;
+    margin: 2rem;
+    width: 40rem;
+}
+
+.productos-preview .preview img {
+    height: 30rem;
+}
+
+.productos-preview .preview.active {
+    display: inline-block;
+}
+
+.productos-preview .preview .fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+    color: #444;
+    font-size: 3rem;
+}
+
+.productos-preview .preview .fa-times:hover {
+    transform: rotate(90deg);
+    color: red;
+}
+
+.productos-preview .preview h3 {
+    color: #444;
+    padding: 1rem 0;
+    font-size: 2rem;
+}
+
+.productos-preview .preview .stars {
+    padding: 1rem 0;
+    font-size: 1.7rem;
+
+}
+
+.productos-preview .preview .stars i {
+    color: #27ae60;
+}
+
+.productos-preview .preview .stars span {
+    color: #999;
+}
+
+.productos-preview .preview p {
+    line-height: 1.5;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: grey;
+}
+
+.productos-preview .preview .precio {
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    color: black;
+}
+
+.productos-preview .preview .compra {
+    cursor: pointer;
+    flex: 1 1 16rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    padding-right: 40px;
+    padding-left: 40px;
+    border-radius: 10px;
+    color: black;
+    border: 2px solid rgb(4, 122, 4);
+}
+
+.productos-preview .preview .carrito {
+    cursor: pointer;
+    flex: 1 1 16rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    margin-left: 40px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background: #444444;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.productos-preview .preview .carrito:hover {
+    background: blue;
+}
+
+.productos-preview .preview .compra:hover {
+    background: rgb(4, 122, 4);
+    color: #fff;
+}
+
+/*********************************** inicio de ayuda **********************************/
+.formConsulta{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+}
+.formLabel{
+    display: block;
+    font-weight: 700;
+    padding: 5px;
+    cursor: pointer;
+}
+.formGpoInput{
+    position: relative;
+}
+.formInput{
+    width: 100%;
+    background: #9c440e;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 35px;
+    line-height: 25px;
+    padding: 0 40px 0 10px;
+    transition: .3s ease all;
+}
+
+.classReclamo{
+    height: 100px;
+    
+}
+.formInput:focus{
+    border: 3px solid #f59649;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163, 0.4 );  
+}
+.formError{
+    font-size: 10px;
+    margin-bottom: 0;
+    display: none;
+}
+.formError-activo{
+    display: inline-block;
+}
+.formVaildar__Estado{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+}
+.formCheckbox{
+    margin-right: 10px;
+}
+.formMensaje{
+    height: 45px;
+    line-height: 45px;
+    background: rgb(230, 85, 85);
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none;
+
+}
+.formMensaje-activo{
+    display: block;
+}
+.formMensaje p {
+margin: 0;
+color: black;
+}
+.formMensaje, .formTerminos, .formReclamo{
+grid-column: span 2;
+}
+.formGpoBtnEnviar p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formBoton{
+    height: 25px;
+    line-height: 25px;
+    width: 40px;
+    background: #c75812;
+    color: #f1f0ee;
+    font-weight: bold;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .1 ease all;
+}
+.formBoton:hover{
+    box-shadow: 3px 0px 30px rgba(163,163,163, 1 );
+    color:#b35a23;
+}
+.formExito{
+    font-size: 14px;
+    color: #27ae60;
+    display: none;
+}
+.formExito-activo{
+display: block;
+}
+/*Estilos para validacion*/
+.formConsulta_gpo-correcto .formVaildar__Estado{
+    color:#27ae60;
+    opacity: 1;
+    
+    }
+    .formConsulta_gpo-incorrecto .formLabel{
+        color:#e21010;
+        opacity: 1;
+    }
+    .formConsulta_gpo-incorrecto .formVaildar__Estado{
+        color:#e21010;
+        opacity: 1;
+    }
+    .formConsulta_gpo-incorrecto .formInput{
+        border: 3px solid #e21010 ;  
+    }
+
+.accordion-body p{
+    text-align: justify;
+}
+.formBotonGestionar{
+    height: 25px;
+    line-height: 25px;
+    width: 50px;
+    background: #c75812;
+    color: #f1f0ee;
+    font-weight: bold;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .1 ease all;
+}
+
+
+
+
+.accordion-button:focus {
+    z-index: 3;
+    border-color: #279C88;
+    outline: 0!important;
+    /* I changed the color on this line */
+    /* If you do not want any color, just delete */
+    box-shadow: 0 0 0 0.25rem rgba(228, 20, 55, 0.25);
+ }
+/* ALEJANDRO */
+
+
+#ayuda {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.tituloAyuda {
+    width: 600px;
+    background-color: #c2c2c2;
+    box-shadow: 7px 13px 37px rgba(196, 105, 2, 0.5);
+    text-align: center;
+}
+
+#ayuda p {
+    overflow: hidden;
+    max-height: 0px;
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #e4e4e4; 
+    transition: all 0.5s ease-in-out;
+    font-size: 12px;
+}
+
+#ayuda a {
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    text-align: left;
+    padding: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(255, 81, 0);
+    color: azure;
+    border-bottom: 2px solid gray;
+    padding:0;
+    margin: 0 9px 0 9px;
+}
+
+section:target p {
+    max-height: 500px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom:180px;
+    margin: 10px;
+}
