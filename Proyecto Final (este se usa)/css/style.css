@@ -879,14 +879,6 @@ body {
 /*********************************** Fin de Productos **********************************/
 
 /******************************* inicio Info ***************************************/
-.sectionG {
-    /*******************************************************************/
-    margin: auto;
-    width: 95%;
-    margin-top: 20px;
-    z-index: 0;
-    border: 1px solid black;
-}
 
 
 #nosotros,
@@ -898,21 +890,33 @@ body {
     text-align: start;
 }
 
-#nuestrosServ p,
+#nuestrosServ ul,
 #nuestrosServ h3,
 #termin p,
 #termin h3 {
     color: #f3f3f3;
-    padding-right: 40px;
+    padding-right: 0px;
 }
 
-.imageContainer {
-    min-width: 150px;
-    min-height: 100px;
+#person {
+    font-size: 1.5rem;
+    padding-left: 0px;
+    
+}
+
+#service {
+    padding-left: 0px;
+    font-size: 1.5rem;
+}
+
+#img-serv {
+    width: 70%;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .text h3,
-.text p {
+.text p, .text li {
     padding: 5px;
 }
 
@@ -926,13 +930,12 @@ body {
 
 @media (min-width: 720px) {
 
-    .imageContainer {
-        padding: 0px 30px;
-        min-width: 500px;
-        width: 60%;
+    #nosotros {
+        display: flex !important;
+        justify-content: space-evenly !important;
     }
 
-    #nuestrosServ .imageContainer {
+    #nuestrosServ .imageContainer, #nosotros .imageContainer {
         height: 75%;
     }
 
@@ -941,20 +944,61 @@ body {
     #ubicacion .text,
     #termin .text,
     #defConsum .text {
-        padding: 140px 0px;
+        padding: 50px 0px;
+        padding-top: 100px;
     }
 
     #nosotros #nuestrosServ #ubicacion #termin #defConsum {
-        padding: 100px 70px;
+        padding: 50px 80px;
     }
 
     .text h3 {
         font-size: 3rem;
     }
 
-    .text p {
+    .text p, #person {
         font-size: 2rem;
     }
+
+    #nosotros .text {
+        padding-top: 0px;
+    }
+
+    #texto-serv {
+        padding-top: 60px !important;
+    }
+
+    #service {
+        font-size: 2rem;
+        padding-left: 0px;
+        padding-top: 10px;
+    }
+
+    #service li {
+        padding-top: 30px;
+        color: rgb(250, 213, 113);
+    }   
+    
+    #img-serv{
+        width: 30%;
+    }
+
+    #nosotros .imageContainer{
+        background-image: linear-gradient(0deg, rgba(0,0,0,0),rgba(0,0,0,0)), url("../img/imagenes de la info/nosotros.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px !important;
+        width: 3000px !important;
+        }
+
+    #nuestrosServ .imageContainer{
+    background-image: linear-gradient(0deg, rgba(0,0,0,0),rgba(0,0,0,0)), url("../img/imagenes de la info/servi.avif");
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 400px;
+    }
+
 }
 
 /******************************* fin Info ***************************************/
